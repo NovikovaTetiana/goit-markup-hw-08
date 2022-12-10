@@ -1,0 +1,85 @@
+.header {
+    border-bottom: 1px solid #ececec;
+}
+
+.header--posihion {
+    @include flex;
+}
+
+.nav {
+    margin-right: auto;
+}
+
+.nav__list {
+    display: flex;
+    gap: 50px;
+}
+
+.nav__item {
+    @include flex;
+    color: var(--secondary-color-text);
+}
+
+.nav__link {
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--main-color-text);
+    @include font (500, 14px, calc(16 / 14), 0.02em);
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.current {
+    color: var(--accent-color);
+
+    &::after {
+        position: absolute;
+        bottom: 0;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 4px;
+        background: #2196F3;
+        border-radius: 2px;
+        opacity: 0;
+        transform: scaleX(1.1);
+    }
+}
+
+.nav__link.current::after {
+    opacity: 1;
+}
+
+
+.nav__icon {
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+.nav__contacts {
+    @include flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--secondary-color-text);
+    @include font (500, 14px, calc(16 / 14), 0.02em);
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}

@@ -1,0 +1,122 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--background-color);
+}
+
+.footer-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.logo-color-footer {
+    color: var(--white-color-text);
+}
+
+
+.address-list {
+    margin-top: 20px;
+}
+
+
+.address-item+.address-item {
+    margin-top: 9px;
+}
+
+.address-item-link {
+    font-style: normal;
+    @include font (null, 14px, 1.71, 0.03em);
+    color: rgba(255, 255, 255, 0.6);
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: var(--white-color-text);
+    }
+}
+
+
+
+/* __________SOCIAL___________ */
+
+
+.footer-heading {
+    display: block;
+    margin-bottom: 20px;
+    @include font (700, 14px, calc(16 / 14), 0.03em);
+    text-transform: uppercase;
+    color: var(--white-color-text)
+}
+
+.footer-soc-list {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-soc-link {
+    width: 100%;
+    height: 100%;
+    @include flex;
+    justify-content: center;
+    color: var(--white-color-text);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+
+    transition-property: background;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background: var(--accent-color);
+    }
+}
+
+.footer-soc-icon {
+    fill: currentColor;
+}
+
+.footer-form {
+    position: relative;
+    @include flex;
+    gap: 12px;
+}
+
+.footer-input {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.6);
+    @include font (400, 16px, 1.25, 0.03em);
+    padding: 15px;
+    outline: none;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus {
+        border: 1px solid var(--accent-color);
+    }
+}
+
+.footer-label {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.6);
+    @include font (400, 16px, 1.25, 0.03em);
+    padding: 15px;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .footer-input:focus+&,
+    .footer-input:not(:placeholder-shown)+& {
+        opacity: 0;
+    }
+}
