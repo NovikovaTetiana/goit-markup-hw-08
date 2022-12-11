@@ -1,32 +1,61 @@
 .client {
     display: flex;
-    padding: 94px 0;
+    padding: 60px 0;
+
+    @include desktop {
+        padding: 94px 0;
+    }
 }
 
 .client-title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @include desktop {
+        margin-bottom: 50px;
+    }
 
     @include font (null, 36px, calc(42 / 36), 0.03em);
     text-align: center;
     color: var(--main-color-text)
 }
 
+
+
 .client-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+}
+
+.client-item {
+    width: calc ((100 - 30px) / 2);
+
+    @include tablet {
+        width: calc ((100 - 60px) / 3);
+    }
 }
 
 .client-link {
     @include flex;
     justify-content: center;
 
-    width: 170px;
+    width: 210px;
+
+    @include tablet {
+        width: 226px;
+    }
+
+    @include desktop {
+        width: 170px;
+    }
+
     height: 92px;
     border: 1px solid #afb1b8;
     border-radius: 4px;
     color: #afb1b8;
 
-    transition-property: color, border;
+    transition-property: color,
+    border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 

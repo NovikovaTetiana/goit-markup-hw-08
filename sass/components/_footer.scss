@@ -4,21 +4,28 @@
     background-color: var(--background-color);
 }
 
-.footer-container {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 70px;
-}
+// .footer-container {
+//     // display: flex;
+//     // align-items: baseline;
+//     // justify-content: space-between;
+//     // gap: 70px;
+// }
 
 .logo-color-footer {
     color: var(--white-color-text);
 }
 
-
-.address-list {
-    margin-top: 20px;
+.footer__logo {
+    text-align: center;
 }
+
+.logo-display {
+    display: block;
+}
+
+// .address-list {
+//     margin-top: 20px;
+// }
 
 
 .address-item+.address-item {

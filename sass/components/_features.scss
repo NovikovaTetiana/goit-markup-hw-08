@@ -29,6 +29,18 @@
     }
 }
 
+.features__item {
+    margin-bottom: 30px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include tablet {
+        margin-bottom: 0;
+    }
+}
+
 .features__item::before {
     content: "";
     display: inline-block;
@@ -85,19 +97,17 @@
     @include font (null, 14px, 1.71, 0.03em);
     color: var(--secondary-color-text);
     width: 450px;
-    margin-bottom: 30px;
-
 
     @include tablet {
         width: 354px;
         display: flex;
         flex-basis: calc((100% - 30px) / 2);
+        margin-bottom: 0;
     }
 
     @include desktop {
         width: 270px;
         display: flex;
         flex-basis: calc((100% - 90px) / 4);
-        margin-bottom: 0;
     }
 }

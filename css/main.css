@@ -493,6 +493,18 @@ body {
   }
 }
 
+.features__item {
+  margin-bottom: 30px;
+}
+.features__item:last-child {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .features__item {
+    margin-bottom: 0;
+  }
+}
+
 .features__item::before {
   content: "";
   display: inline-block;
@@ -555,13 +567,13 @@ body {
   letter-spacing: 0.03em;
   color: var(--secondary-color-text);
   width: 450px;
-  margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .features__text {
     width: 354px;
     display: flex;
     flex-basis: calc((100% - 30px) / 2);
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -569,12 +581,17 @@ body {
     width: 270px;
     display: flex;
     flex-basis: calc((100% - 90px) / 4);
-    margin-bottom: 0;
   }
 }
 
 .occupation {
   padding: 94px 0;
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .occupation {
+    display: block;
+  }
 }
 
 .occupation__title {
@@ -703,28 +720,48 @@ body {
 
 .client {
   display: flex;
-  padding: 94px 0;
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .client {
+    padding: 94px 0;
+  }
 }
 
 .client-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-size: 36px;
   line-height: 1.1666666667;
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--main-color-text);
 }
+@media screen and (min-width: 1200px) {
+  .client-title {
+    margin-bottom: 50px;
+  }
+}
 
 .client-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+}
+
+.client-item {
+  width: calc 35px;
+}
+@media screen and (min-width: 768px) {
+  .client-item {
+    width: calc 13.3333333333px;
+  }
 }
 
 .client-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 170px;
+  width: 210px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -732,6 +769,16 @@ body {
   transition-property: color, border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .client-link {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client-link {
+    width: 170px;
+  }
 }
 .client-link:hover, .client-link:focus {
   color: var(--accent-color);
@@ -754,19 +801,16 @@ body {
   background-color: var(--background-color);
 }
 
-.footer-container {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 70px;
-}
-
 .logo-color-footer {
   color: var(--white-color-text);
 }
 
-.address-list {
-  margin-top: 20px;
+.footer__logo {
+  text-align: center;
+}
+
+.logo-display {
+  display: block;
 }
 
 .address-item + .address-item {
