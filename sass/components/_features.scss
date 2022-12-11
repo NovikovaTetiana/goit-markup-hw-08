@@ -27,18 +27,6 @@
         flex-wrap: wrap;
         gap: 30px;
     }
-
-    @include desktop {
-        display: flex;
-        gap: 30px;
-    }
-}
-
-.features__item {
-
-    @include tablet {
-        width: calc((100 - 30px) / 2);
-    }
 }
 
 .features__item::before {
@@ -46,11 +34,22 @@
     display: inline-block;
     background: #F5F4FA;
     border-radius: 4px;
-    width: 270px;
+    width: 450px;
     height: 120px;
     margin-bottom: 30px;
     background-repeat: no-repeat;
     background-position: center;
+
+
+    @include tablet {
+        width: 354px;
+        height: 120px;
+    }
+
+    @include desktop {
+        width: 270px;
+        height: 120px;
+    }
 }
 
 .icon-antenna::before {
@@ -74,11 +73,31 @@
     @include font (null, 14px, calc(16 / 14), 0.03em);
     text-transform: uppercase;
     color: var(--main-color-text);
+    text-align: center;
+
+    @include tablet {
+        text-align: start;
+    }
 }
 
 .features__text {
-    display: flex;
-    flex-basis: calc((100% - 90px) / 4);
+    display: block;
     @include font (null, 14px, 1.71, 0.03em);
     color: var(--secondary-color-text);
+    width: 450px;
+    margin-bottom: 30px;
+
+
+    @include tablet {
+        width: 354px;
+        display: flex;
+        flex-basis: calc((100% - 30px) / 2);
+    }
+
+    @include desktop {
+        width: 270px;
+        display: flex;
+        flex-basis: calc((100% - 90px) / 4);
+        margin-bottom: 0;
+    }
 }
