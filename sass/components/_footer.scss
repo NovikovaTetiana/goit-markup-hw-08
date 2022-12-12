@@ -4,28 +4,48 @@
     background-color: var(--background-color);
 }
 
-// .footer-container {
-//     // display: flex;
-//     // align-items: baseline;
-//     // justify-content: space-between;
-//     // gap: 70px;
-// }
+.footer-container {
+
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+}
+
+.footer-container-tablet {
+    @include tablet {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+
+    @include desktop {
+        gap: 70px;
+    }
+}
+
+.footer__logo {
+    display: block;
+    text-align: center;
+    margin-right: auto;
+}
 
 .logo-color-footer {
     color: var(--white-color-text);
 }
 
-.footer__logo {
+
+.address-list {
+    margin-bottom: 60px;
+    margin-top: 20px;
     text-align: center;
-}
 
-.logo-display {
-    display: block;
+    @include desktop {
+        margin-top: 20px;
+        text-align: start;
+    }
 }
-
-// .address-list {
-//     margin-top: 20px;
-// }
 
 
 .address-item+.address-item {
@@ -51,18 +71,24 @@
 
 /* __________SOCIAL___________ */
 
-
 .footer-heading {
     display: block;
     margin-bottom: 20px;
+    text-align: center;
     @include font (700, 14px, calc(16 / 14), 0.03em);
     text-transform: uppercase;
-    color: var(--white-color-text)
+    color: var(--white-color-text);
+
+    @include desktop {
+        text-align: start;
+    }
 }
 
 .footer-soc-list {
     display: flex;
+    justify-content: center;
     gap: 10px;
+    margin-bottom: 60px;
 }
 
 .footer-soc-link {
@@ -88,14 +114,22 @@
     fill: currentColor;
 }
 
+.footer__form--flex {
+    @include desktop {
+        @include flex;
+        gap: 12px;
+    }
+}
+
 .footer-form {
     position: relative;
-    @include flex;
-    gap: 12px;
 }
 
 .footer-input {
-    width: 358px;
+
+    display: block;
+    max-width: 450px;
+    width: 100%;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -110,6 +144,11 @@
     &:focus {
         border: 1px solid var(--accent-color);
     }
+
+    @include desktop {
+        width: 358px;
+
+    }
 }
 
 .footer-label {
@@ -117,6 +156,7 @@
     left: 0px;
     top: 50%;
     transform: translateY(-50%);
+
     color: rgba(255, 255, 255, 0.6);
     @include font (400, 16px, 1.25, 0.03em);
     padding: 15px;

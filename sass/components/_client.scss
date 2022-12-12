@@ -30,6 +30,7 @@
 .client-item {
     width: calc ((100 - 30px) / 2);
 
+
     @include tablet {
         width: calc ((100 - 60px) / 3);
     }
