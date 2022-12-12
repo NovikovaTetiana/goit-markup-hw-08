@@ -29,6 +29,10 @@
     display: block;
     text-align: center;
     margin-right: auto;
+
+    @include desktop {
+        text-align: start;
+    }
 }
 
 .logo-color-footer {
@@ -43,6 +47,7 @@
 
     @include desktop {
         margin-top: 20px;
+        margin-bottom: 0;
         text-align: start;
     }
 }
@@ -123,6 +128,8 @@
 
 .footer-form {
     position: relative;
+
+
 }
 
 .footer-input {
@@ -145,9 +152,13 @@
         border: 1px solid var(--accent-color);
     }
 
+    @include tablet {
+        margin: auto;
+
+    }
+
     @include desktop {
         width: 358px;
-
     }
 }
 

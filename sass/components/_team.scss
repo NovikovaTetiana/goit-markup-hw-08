@@ -1,23 +1,59 @@
 .team {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color: #f5f4fA;
+
+    @include desktop {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .team__title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
-    @include font (null, 36px, calc(42 / 36), 0.03em);
+    @include font (null, 28px, calc(33 / 28), 0.03em);
     text-align: center;
     color: var(--main-color-text);
+
+    @include desktop {
+        @include font (null, 36px, calc(42 / 36), 0.03em);
+        margin-bottom: 50px;
+    }
 }
 
 .team__list {
-    display: flex;
+
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+    }
+
+    @include desktop {
+        flex-wrap: nowrap;
+        gap: 0;
+    }
+}
+
+.team__item {
+    margin-bottom: 30px;
+
+    @include tablet {
+        margin-bottom: 0;
+    }
+}
+
+.team__item:last-child {
+    margin-bottom: 0;
 }
 
 .team__item+.team__item {
-    margin-left: 30px;
+
+    @include desktop {
+        margin-left: 30px;
+    }
 }
 
 .card {
@@ -25,6 +61,16 @@
     background: #ffffff;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    max-width: 450px;
+    width: 100%;
+
+    @include tablet {
+        min-width: 354px;
+    }
+
+    @include desktop {
+        min-width: 270px;
+    }
 }
 
 .card__heading {

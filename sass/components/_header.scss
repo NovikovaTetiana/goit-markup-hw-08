@@ -1,5 +1,11 @@
 .header {
     border-bottom: 1px solid #ececec;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    @include tablet {
+        padding: 0;
+    }
 }
 
 .header--posihion {
@@ -8,11 +14,20 @@
 
 .nav {
     margin-right: auto;
+
 }
 
 .nav__list {
-    display: flex;
-    gap: 50px;
+    // display: none;
+
+    @include tablet {
+        display: block;
+    }
+
+    @include desktop {
+        display: flex;
+        gap: 50px;
+    }
 }
 
 .nav__item {
@@ -83,3 +98,16 @@
         color: var(--accent-color);
     }
 }
+
+// ________MENU__________
+.mob-menu {}
+
+.menu-open {}
+
+.menu-open-icon {}
+
+.menu__list {}
+
+.menu__item {}
+
+.menu-soc {}
