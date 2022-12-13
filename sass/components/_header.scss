@@ -14,17 +14,12 @@
 
 .nav {
     margin-right: auto;
-
 }
 
 .nav__list {
     display: none;
 
     @include tablet {
-        display: block;
-    }
-
-    @include desktop {
         display: flex;
         gap: 50px;
     }
@@ -82,20 +77,27 @@
 }
 
 .nav__contacts {
-    @include flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
 
-    color: var(--secondary-color-text);
-    @include font (500, 14px, calc(16 / 14), 0.02em);
 
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include tablet {}
 
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
+    @include desktop {
+        @include flex;
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        color: var(--secondary-color-text);
+        @include font (500, 14px, calc(16 / 14), 0.02em);
+
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+
     }
 }
 
@@ -109,6 +111,10 @@
     flex-direction: column;
     justify-content: space-between;
     overflow: auto;
+
+    @include tablet {
+        display: none;
+    }
 
 }
 
