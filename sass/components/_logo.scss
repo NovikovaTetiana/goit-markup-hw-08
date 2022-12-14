@@ -5,8 +5,13 @@
     @include font (700, 24px, calc(28/24), 0.03em);
     color: #000000;
 
+    @include tablet {
+        margin-right: 87px;
+    }
+
     @include desktop {
         @include font (700, 26px, calc(31/26), 0.03em);
+        margin-right: 93px;
     }
 
 }

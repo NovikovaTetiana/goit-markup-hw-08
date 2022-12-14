@@ -128,8 +128,6 @@
 
 .footer-form {
     position: relative;
-
-
 }
 
 .footer-input {
@@ -177,4 +175,5 @@
     .footer-input:not(:placeholder-shown)+& {
         opacity: 0;
     }
+
 }

@@ -1,11 +1,6 @@
 .header {
     border-bottom: 1px solid #ececec;
-    padding-top: 16px;
-    padding-bottom: 16px;
 
-    @include tablet {
-        padding: 0;
-    }
 }
 
 .header--posihion {
@@ -25,68 +20,34 @@
     }
 }
 
+.nav__list--posihion {
+    @include tablet {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    @include desktop {
+        flex-direction: row;
+        gap: 30px;
+
+
+    }
+}
+
 .nav__item {
     @include flex;
     color: var(--secondary-color-text);
+
 }
 
 .nav__link {
-    position: relative;
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-
-    color: var(--main-color-text);
-    @include font (500, 14px, calc(16 / 14), 0.02em);
-
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
-    }
-}
-
-.current {
-    color: var(--accent-color);
-
-    &::after {
-        position: absolute;
-        bottom: 0;
-        content: "";
+    @include tablet {
+        position: relative;
         display: block;
-        width: 100%;
-        height: 4px;
-        background: #2196F3;
-        border-radius: 2px;
-        opacity: 0;
-        transform: scaleX(1.1);
-    }
-}
-
-.nav__link.current::after {
-    opacity: 1;
-}
-
-
-.nav__icon {
-    margin-right: 10px;
-    fill: currentColor;
-}
-
-.nav__contacts {
-
-
-    @include tablet {}
-
-    @include desktop {
-        @include flex;
         padding-top: 32px;
         padding-bottom: 32px;
 
-        color: var(--secondary-color-text);
+        color: var(--main-color-text);
         @include font (500, 14px, calc(16 / 14), 0.02em);
 
         transition-property: color;
@@ -97,16 +58,95 @@
         &:focus {
             color: var(--accent-color);
         }
+    }
+}
+
+.current {
+    @include tablet {
+        color: var(--accent-color);
+
+        &::after {
+            position: absolute;
+            bottom: 0;
+            content: "";
+            display: block;
+            width: 100%;
+            height: 4px;
+            background: #2196F3;
+            border-radius: 2px;
+            opacity: 0;
+            transform: scaleX(1.1);
+        }
+    }
+}
+
+.nav__link.current::after {
+    @include tablet {
+        opacity: 1;
+    }
+}
+
+
+.nav__icon {
+    @include tablet {
+        margin-right: 10px;
+        fill: currentColor;
+
+    }
+
+    @include desktop {
+        width: 16px;
+        height: 12px;
 
     }
 }
 
+.nav__icon--size {
+    @include desktop {
+        height: 16px;
+    }
+}
+
+.nav__contacts {
+
+    @include tablet {
+
+        color: var(--secondary-color-text);
+        @include font (500, 14px, calc(16 / 14), 0.02em);
+
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            @include font (500, 14px, calc(16 / 14), 0.02em);
+        }
+
+    }
+
+    @include desktop {
+        @include flex;
+    }
+
+}
+
 // ________MENU__________
 
-.mob-container {
+.mob-menu {
+    position: fixed;
 
-    outline: 1px solid red;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    top: 0;
+
+
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40px;
+    color: #212121;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -115,18 +155,6 @@
     @include tablet {
         display: none;
     }
-
-}
-
-.mob-menu {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-color: #ffffff;
-    top: 0;
-    padding-top: 48px;
-    padding-bottom: 48px;
-    color: #212121;
 }
 
 .menu-close {
@@ -138,12 +166,11 @@
     border: none;
 
     cursor: pointer;
-
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
-.menu-close {
+.menu-close-icon {
     fill: currentColor;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     .menu-close:hover &,
     .menu-close:focus & {
@@ -151,9 +178,65 @@
     }
 }
 
-.menu__item {}
+.menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    margin-bottom: 302px;
+}
 
 .menu__link {
     color: var(--main-color-text);
-    @include font (500, px, calc(47 / 40), 0.02em);
+    @include font (500, 40px, calc(47 / 40), 0.02em);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.menu__contact {
+    margin-bottom: 32px;
+
+    &:last-child {
+        margin-bottom: 64px;
+    }
+}
+
+.menu__contacts {
+    color: var(--secondary-color-text);
+    @include font (500, 14px, calc(16 / 14), 0.02em);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), font 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+        @include font (500, 34px, calc(40 / 34), 0.02em);
+    }
+}
+
+.menu-soc {
+    display: flex;
+    gap: 20px;
+}
+
+
+.menu-soc-link {
+    @include font (500, 18px, calc(22 / 18), 0.02em);
+    color: var(--accent-color);
+    position: relative;
+
+    &::after {
+        content: "";
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        position: absolute;
+        bottom: 50%;
+        width: 22px;
+        height: 0px;
+        transform: rotate(90deg);
+    }
 }
