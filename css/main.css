@@ -713,10 +713,12 @@ body {
 
 .featers {
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
   .featers {
     padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -839,7 +841,7 @@ body {
 }
 
 .occupation {
-  padding: 94px 0;
+  padding-bottom: 94px;
   display: none;
 }
 @media screen and (min-width: 1200px) {

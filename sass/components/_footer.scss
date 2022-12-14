@@ -181,9 +181,7 @@
         opacity: 0;
     }
 
-    @include tablet {
-        // transform: translateX(100%);
-    }
+    @include tablet {}
 
     @include desktop {
         top: 50%;
