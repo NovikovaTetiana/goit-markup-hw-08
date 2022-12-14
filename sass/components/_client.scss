@@ -23,23 +23,28 @@
 
 .client-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+    width: 100%;
 }
 
-// .client-item {
-//     width: calc((100 - 30px) / 2);
+.client-item {
+    width: calc((100% - 30px) / 2);
 
-//     @include tablet {
-//         width: calc((100 - 60px) / 3);
-//     }
-// }
+    @include tablet {
+        width: calc((100% - 60px) / 3);
+    }
+
+    @include desktop {
+        width: calc((100% - 150px) / 6);
+    }
+}
 
 .client-link {
     @include flex;
     justify-content: center;
 
-    width: 170px;
-    width: 100%;
+    max-width: 226px;
     height: 92px;
     border: 1px solid #afb1b8;
     border-radius: 4px;

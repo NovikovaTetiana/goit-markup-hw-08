@@ -28,7 +28,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
-
+        width: 100%;
     }
 
     @include desktop {
@@ -42,6 +42,7 @@
 
     @include tablet {
         margin-bottom: 0;
+        width: calc((100% - 30px) / 2);
     }
 }
 
