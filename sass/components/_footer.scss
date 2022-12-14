@@ -155,36 +155,15 @@
     outline: none;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+    &::placeholder {
+        @include font (400, 16px, 1.25, 0.03em);
+    }
+
     &:focus {
         border: 1px solid var(--accent-color);
     }
 
-    @include tablet {}
-
     @include desktop {
         width: 358px;
-    }
-}
-
-.footer-label {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-
-    color: rgba(255, 255, 255, 0.6);
-    @include font (400, 16px, 1.25, 0.03em);
-    padding: 15px;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    .footer-input:focus+&,
-    .footer-input:not(:placeholder-shown)+& {
-        opacity: 0;
-    }
-
-    @include tablet {}
-
-    @include desktop {
-        top: 50%;
-        transform: translateY(-50%);
     }
 }

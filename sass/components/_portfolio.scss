@@ -1,6 +1,7 @@
 .portfolio-section {
     padding-top: 94px;
     padding-bottom: 94px;
+
 }
 
 .portfolio-title {
@@ -21,11 +22,24 @@
 
 .filters {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 34px;
+    margin-bottom: 40px;
+    width: 100%;
+
+    @include tablet {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    @include desktop {
+        margin-bottom: 34px;
+    }
 }
 
+.filters-item {
+    max-width: 130px;
+}
 
 
 /* __________PORTFOLIO-CONTENT___________ */
@@ -34,6 +48,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+
 }
 
 .portfolio-item {
