@@ -128,11 +128,20 @@
 
 .footer-form {
     position: relative;
+
+
+    @include tablet {
+        text-align: center;
+    }
+
+    @include desktop {
+        @include flex;
+        gap: 12px;
+
+    }
 }
 
 .footer-input {
-
-    display: block;
     max-width: 450px;
     width: 100%;
     height: 50px;
@@ -150,10 +159,7 @@
         border: 1px solid var(--accent-color);
     }
 
-    @include tablet {
-        margin: auto;
-
-    }
+    @include tablet {}
 
     @include desktop {
         width: 358px;
@@ -163,8 +169,7 @@
 .footer-label {
     position: absolute;
     left: 0px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0px;
 
     color: rgba(255, 255, 255, 0.6);
     @include font (400, 16px, 1.25, 0.03em);
@@ -176,4 +181,12 @@
         opacity: 0;
     }
 
+    @include tablet {
+        // transform: translateX(100%);
+    }
+
+    @include desktop {
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
