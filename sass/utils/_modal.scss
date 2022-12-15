@@ -1,5 +1,5 @@
 .backdrop {
-
+    padding: 0px 15px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -9,6 +9,7 @@
 
 
 }
+
 
 .modal {
     max-width: 450px;
@@ -26,7 +27,6 @@
     transform: translate(-50%, -50%) scaleY(1) rotate(0deg);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-
     .backdrop.is-hidden & {
         transform: translate(-50%, -50%) scaleY(0) rotate(-15deg)
     }
@@ -35,6 +35,7 @@
         min-width: 528px;
         min-height: 581px;
     }
+
 }
 
 .modal-close {
