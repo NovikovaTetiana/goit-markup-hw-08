@@ -261,14 +261,14 @@ img {
   height: auto;
 }
 
-.no-scroll {
-  overflow: hidden;
-}
-
 body {
   background-color: #ffffff;
   color: var(--main-color-text);
   font-family: roboto, sans-serif;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .container {
@@ -526,7 +526,6 @@ body {
 
 .menu__contact {
   margin-bottom: 32px;
-  max-width: 296px;
   width: 100%;
 }
 
