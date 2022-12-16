@@ -219,8 +219,7 @@
 .menu-soc {
     display: flex;
     gap: 20px;
-
-    max-width: 480px;
+    // max-width: 480px;
 }
 
 .menu-soc-item {
@@ -241,6 +240,6 @@
         @include font (500, 18px, calc(22 / 18), 0.02em);
         color: var(--accent-color);
         width: 100%;
-        max-width: 480px;
+    
     }
 }
