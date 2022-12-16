@@ -261,6 +261,10 @@ img {
   height: auto;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 body {
   background-color: #ffffff;
   color: var(--main-color-text);
@@ -505,6 +509,7 @@ body {
 
 .menu-contact-wrap {
   margin: auto 0 64px 0;
+  width: 100%;
 }
 
 .menu__link {
@@ -521,6 +526,8 @@ body {
 
 .menu__contact {
   margin-bottom: 32px;
+  max-width: 296px;
+  width: 100%;
 }
 
 .menu__mail {
@@ -542,24 +549,26 @@ body {
 .menu-soc {
   display: flex;
   gap: 20px;
+  max-width: 480px;
 }
 
-.menu-soc-link {
+.menu-soc-item:not(:last-child)::after {
+  content: "";
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  bottom: 50%;
+  width: 22px;
+  height: 0px;
+  transform: rotate(90deg);
+  margin-left: 10px;
+}
+.menu-soc-item .menu-soc-link {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.2222222222;
   letter-spacing: 0.02em;
   color: var(--accent-color);
-  position: relative;
-}
-.menu-soc-link + .menu-soc-link::before {
-  content: "";
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  position: absolute;
-  bottom: 50%;
-  width: 22px;
-  height: 0px;
-  transform: rotate(90deg);
+  width: 100%;
+  max-width: 480px;
 }
 
 .hero {

@@ -185,6 +185,7 @@
 
 .menu-contact-wrap {
     margin: auto 0 64px 0;
+    width: 100%;
 }
 
 .menu__link {
@@ -201,11 +202,14 @@
 
 .menu__contact {
     margin-bottom: 32px;
+    max-width: 296px;
+    width: 100%;
 }
 
 .menu__mail {
     color: var(--accent-color);
     @include font (500, 34px, calc(40 / 34), 0.02em);
+
 }
 
 .menu__contacts {
@@ -216,21 +220,28 @@
 .menu-soc {
     display: flex;
     gap: 20px;
+
+    max-width: 480px;
 }
 
+.menu-soc-item {
 
-.menu-soc-link {
-    @include font (500, 18px, calc(22 / 18), 0.02em);
-    color: var(--accent-color);
-    position: relative;
 
-    &+&::before {
+    &:not(:last-child)::after {
         content: "";
         border: 1px solid rgba(33, 33, 33, 0.2);
-        position: absolute;
         bottom: 50%;
         width: 22px;
         height: 0px;
         transform: rotate(90deg);
+        margin-left: 10px;
+
+    }
+
+    .menu-soc-link {
+        @include font (500, 18px, calc(22 / 18), 0.02em);
+        color: var(--accent-color);
+        width: 100%;
+        max-width: 480px;
     }
 }
