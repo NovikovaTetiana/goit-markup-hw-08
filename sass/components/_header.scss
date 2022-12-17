@@ -209,6 +209,9 @@
     color: var(--accent-color);
     @include font (500, 34px, calc(40 / 34), 0.02em);
 
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+        @include font (500, 30px, calc(40 / 30), 0.02em);
+    }
 }
 
 .menu__contacts {
@@ -217,9 +220,13 @@
 }
 
 .menu-soc {
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     display: flex;
     gap: 20px;
-    // max-width: 480px;
 }
 
 .menu-soc-item {

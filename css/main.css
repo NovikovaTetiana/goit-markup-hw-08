@@ -190,6 +190,12 @@
   margin: -1px;
 }
 
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .checkbox-wrap {
+    max-width: 346px;
+  }
+}
+
 .check-text {
   display: flex;
   align-items: center;
@@ -199,6 +205,11 @@
   line-height: 1.1666666667;
   letter-spacing: 0.03em;
   color: var(--secondary-color-text);
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .check-text {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 1200px) {
   .check-text {
@@ -536,6 +547,14 @@ body {
   line-height: 1.1764705882;
   letter-spacing: 0.02em;
 }
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .menu__mail {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.3333333333;
+    letter-spacing: 0.02em;
+  }
+}
 
 .menu__contacts {
   color: var(--secondary-color-text);
@@ -548,6 +567,12 @@ body {
 .menu-soc {
   display: flex;
   gap: 20px;
+}
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .menu-soc {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .menu-soc-item:not(:last-child)::after {
